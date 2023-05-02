@@ -1,4 +1,4 @@
-package com.example;
+package com.example.model;
 
 import javax.persistence.*;
 
@@ -20,6 +20,25 @@ public class User {
 
   @Column(name = "last_name", nullable = false, length = 20)
   private String lastName;
+
+  private String address;
+  private String phone;
+
+  public String getAddress() {
+    return address;
+  }
+
+  public void setAddress(String address) {
+    this.address = address;
+  }
+
+  public String getPhone() {
+    return phone;
+  }
+
+  public void setPhone(String phone) {
+    this.phone = phone;
+  }
 
   public Long getId() {
     return id;
@@ -76,5 +95,14 @@ public class User {
     this.password = password;
     this.firstName = firstName;
     this.lastName = lastName;
+  }
+
+  public User(String email, String password, String firstName, String lastName, String address, String phone) {
+    this.email = email;
+    this.password = password;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.address = address;
+    this.phone = phone;
   }
 }

@@ -1,5 +1,7 @@
 package com.example;
 
+import com.example.model.User;
+import com.example.repository.UserRepository;
 import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -47,4 +49,5 @@ public class AppController {
     model.addAttribute("principal",principal.getName());
     return "users";
   }
+
 }
